@@ -1,0 +1,16 @@
+dominion_dividers \
+    --outfile output.pdf \
+    --papersize A4 \
+    --language fr \
+    --orientation horizontal \
+    --size normal \
+    --order cost \
+    --front card \
+    --back rules \
+    --types \
+    --tab-side left-alternate \
+    --tab-number 2 \
+    --tab-name-align left \
+    --cost tab \
+    --set-icon tab \
+    --expansions dominion1stEdition intrigue2ndEdition prosperity2ndEdition cornucopia
