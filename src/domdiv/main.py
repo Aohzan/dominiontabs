@@ -158,10 +158,7 @@ def add_card_text(cards, language="en_us"):
         if card.card_tag in card_text:
             if "name" in card_text[card.card_tag].keys():
                 card.name = (
-                    card_text[card.card_tag]["name"]
-                    + "("
-                    + card.card_tag
-                    + ")"
+                    card_text[card.card_tag]["name"] + " (" + card.card_tag + ")"
                 )
             if "description" in card_text[card.card_tag].keys():
                 card.description = card_text[card.card_tag]["description"]
@@ -399,7 +396,9 @@ def filter_sort_cards(cards, options):
 
     # Split out Official and Fan set information
     Official_sets = set()  # Will hold official sets
-    Official_search = []  # Will hold official sets for searching, both set key and set_name
+    Official_search = (
+        []
+    )  # Will hold official sets for searching, both set key and set_name
     Fan_sets = set()  # Will hold fan sets
     Fan_search = []  # Will hold fan sets for searching, both set key and set_name
     wantedSets = set()  # Will hold all the sets requested for printing
